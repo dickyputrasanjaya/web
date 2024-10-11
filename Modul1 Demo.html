@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dick's Hotel - Luxury Accommodation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --black: #000000;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--black);
+            color: var(--gold);
+        }
+        .navbar {
+            background-color: var(--black);
+            border-bottom: 2px solid var(--gold);
+        }
+        .navbar-brand, .nav-link {
+            color: var(--gold) !important;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--black);
+            border: none;
+        }
+        .btn-gold:hover {
+            background-color: var(--dark-gold);
+            color: var(--black);
+        }
+        .card {
+            background-color: var(--black);
+            border: 1px solid var(--gold);
+        }
+        .footer {
+            background-color: var(--black);
+            border-top: 2px solid var(--gold);
+        }
+        .footer a {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dick's Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rooms">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="container text-center">
+                <h1 class="display-4 text-gold mb-4">Welcome to Dick's Hotel</h1>
+                <p class="lead mb-4">Rasakan kemewahan dan kenyamanan di tengah kota</p>
+                <a href="#rooms" class="btn btn-gold btn-lg">Booking</a>
+            </div>
+        </section>
+        <section id="rooms" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Luxurious Rooms</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Deluxe Room">
+                            <div class="card-body">
+                                <h5 class="card-title">Deluxe Room</h5>
+                                <p class="card-text">Kamar yang luas dan elegan dengan tempat tidur king dan pemandangan kota.</p>
+                                <a class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#bookingModal" data-room="Deluxe Room">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Suite">
+                            <div class="card-body">
+                                <h5 class="card-title">Executive Suite</h5>
+                                <p class="card-text">Suite mewah dengan ruang tamu terpisah dan pemandangan yang indah.</p>
+                                <a class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#bookingModal" data-room="Executive Suite">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" class="card-img-top" alt="Family Room">
+                            <div class="card-body">
+                                <h5 class="card-title">Family Room</h5>
+                                <p class="card-text">Kamar nyaman dengan dua tempat tidur queen, cocok untuk keluarga.</p>
+                                <a class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#bookingModal" data-room="Family Room">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Contact -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: var(--black); color: var(--gold);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Info</th>
+                                <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Phone</td>
+                                <td>081234567890</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>info@dickshotel.com</td>
+                            </tr>
+                            <tr>
+                                <td>Location</td>
+                                <td>Jl. Dinasrunsi No 23, Kota Batu, Jawa Timur</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-gold" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="background-color: var(--black); color: var(--gold);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Booking Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="roomType" class="form-label">Room Type</label>
+                            <input type="text" class="form-control" id="roomType" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkInDate" class="form-label">Check-in Date</label>
+                            <input type="date" class="form-control" id="checkInDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkOutDate" class="form-label">Check-out Date</label>
+                            <input type="date" class="form-control" id="checkOutDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numberOfGuests" class="form-label">Number of Guests</label>
+                            <input type="number" class="form-control" id="numberOfGuests" min="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-gold">Confirm Booking</button>
+                    </form>
+                    <div class="alert alert-success mt-3 d-none" id="bookingSuccessMessage">Booking confirmed!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Dick's Hotel</h5>
+                    <p>jl.dinasrunsi no 23<br>kota batu<br>Jawa Timur</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-gold">About Us</a></li>
+                        <li><a href="#" class="text-gold">Rooms & Suites</a></li>
+                        <li><a href="#" class="text-gold">Dining</a></li>
+                        <li><a href="#" class="text-gold">Spa & Wellness</a></li>
+                    </ul>
+                </div>
+
+                <div id="contact" class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Phone: 081234567890<br>Email: info@dickshotel.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-gold me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gold me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gold me-2"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: var(--gold);">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 DickyPutra. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Set room type in the booking modal
+            $('#bookingModal').on('show.bs.modal', function(event) {
+                const button = $(event.relatedTarget);
+                const room = button.data('room');
+                const modal = $(this);
+                modal.find('#roomType').val(room);
+            });
+
+            // Handle booking form submission
+            $('#bookingForm').on('submit', function(event) {
+                event.preventDefault();
+                $('#bookingSuccessMessage').removeClass('d-none');
+                $('#bookingForm')[0].reset();
+                $('#bookingModal').modal('hide');
+            });
+        });
+    </script>
+</body>
+</html>
